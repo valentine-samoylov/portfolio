@@ -1,0 +1,30 @@
+// Button
+.btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.889em 1.667em;
+  border-radius: 3em;
+  border: none;
+  text-align: center;
+  font-size: inherit;
+  font-weight: 700;
+  white-space: nowrap;
+  color: inherit;
+  transition-property: box-shadow, border, background-color, color;
+  transition-duration: 0.3s;
+  transition-timing-function: $transitionStyle;
+  outline: transparent;
+  cursor: pointer;
+  user-select: none;
+
+  @include respond-min(md) {
+    &:hover {
+    }
+
+    &:focus {
+    }
+
+    &:active {
+    }
+  }
+}

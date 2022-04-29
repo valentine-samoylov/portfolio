@@ -1,0 +1,28 @@
+// Header
+@import '../../assets/styles/utils/variables';
+@import '../../assets/styles/utils/mixins';
+
+.header {
+  // position: fixed;
+  z-index: 100;
+  flex: 0 0 auto;
+  width: 100%;
+  padding: 2rem 0;
+  transition: background-color 0.3s $transitionStyle 0s;
+
+  &.isScrolled {
+    background: white;
+  }
+
+  @include respond-max(md) {
+    & {
+      padding: 1rem 0;
+    }
+  }
+
+  @include respond-max(sm) {
+    & {
+      padding: 0.5rem 0;
+    }
+  }
+}

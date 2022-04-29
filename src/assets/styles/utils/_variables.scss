@@ -1,0 +1,31 @@
+// Container properties
+$containerMaxWidth: 1320px;
+$containerMinWidth: 320px;
+$totalMaxWidth: $containerMaxWidth + 30px;
+
+$container: (
+  xl: 1170px,
+  lg: 960px,
+  md: 720px,
+  sm: 540px,
+  xs: none,
+);
+
+// Media breakpoints
+$breakpoints: (
+  xl: 1399.98px,
+  lg: 1199.98px,
+  md: 991.98px,
+  sm: 767.98px,
+  xs: 575.98px,
+);
+
+// Fonts
+$fontInter: 'Inter', sans-serif;
+
+// Colours
+$colorWhite: #ffffff;
+$colorBlack: #000000;
+
+// Transitions
+$transitionStyle: ease;

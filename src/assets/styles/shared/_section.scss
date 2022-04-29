@@ -1,0 +1,19 @@
+.section {
+  padding: 5rem 0;
+
+  &__heading,
+  &__subheading {
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &__heading {
+  }
+
+  &__subheading {
+  }
+
+  &__text {
+    margin: 0;
+  }
+}

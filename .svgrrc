@@ -1,0 +1,6 @@
+{
+  "prettier": false,
+  "svgo": true,
+  "icon": true,
+  "titleProp": true
+}

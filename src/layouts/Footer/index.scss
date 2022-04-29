@@ -1,0 +1,17 @@
+// Footer
+
+.footer {
+  flex: 0 0 auto;
+  padding: 2rem 0;
+
+  &__copyright {
+    font-size: 0.75rem;
+  }
+
+  &__icon {
+    width: 1em;
+    height: 1em;
+    margin: 0 0.3em;
+    color: indigo;
+  }
+}

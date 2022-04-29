@@ -1,0 +1,49 @@
+// Mixins
+// Media, min-width
+@mixin respond-min($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+      @content;
+    }
+  } @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+
+// Media, max-width
+@mixin respond-max($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: #{map-get($breakpoints, $breakpoint)}) {
+      @content;
+    }
+  } @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+
+// Fluid images
+@mixin img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+// Truncate text
+@mixin text-truncate() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Connect fonts to project
+@mixin font-face($font-family, $url, $weight) {
+  @font-face {
+    font-family: '#{$font-family}';
+    src: url('../fonts/#{$url}.woff2') format('woff2'), url('../fonts/#{$url}.woff') format('woff'),
+      url('../fonts/#{$url}.ttf') format('truetype');
+    font-weight: #{$weight};
+    font-display: swap;
+    font-style: normal;
+  }
+}
