@@ -1,0 +1,39 @@
+// About
+.about {
+  &__imgWrapper {
+    margin-right: 6rem;
+  }
+
+  &__img {
+    width: 16rem;
+    height: 16rem;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  @include respond-max(md) {
+    &__imgWrapper {
+      margin-right: 3rem;
+    }
+
+    &__img {
+      width: 12rem;
+      height: 12rem;
+    }
+  }
+
+  @include respond-max(sm) {
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__imgWrapper {
+      margin: 0 0 2rem;
+    }
+
+    &__img {
+      width: 10rem;
+      height: 10rem;
+    }
+  }
+}

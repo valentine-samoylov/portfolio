@@ -1,11 +1,12 @@
 // Header
-import { useEffect, useState, useRef } from 'react'
+import { useEffect, useState } from 'react'
 import './index.scss'
 import Container from '@/components/Container'
+import Nav from '@/components/Nav'
+import ScrollIndicator from '@/components/ScrollIndicator'
 
-const Header: React.FC = () => {
+const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
-  const headerRef = useRef(null)
 
   const handleScroll = () => {
     const offsetY = window.scrollY
@@ -25,12 +26,13 @@ const Header: React.FC = () => {
   }, [])
 
   return (
-    <header className={`header ${isScrolled ? 'isScrolled' : ''}`} ref={headerRef}>
+    <header className={`header ${isScrolled ? 'isScrolled' : ''}`}>
       <Container>
         <div className="header__inner">
-          <a href="#">Link</a>
+          <Nav />
         </div>
       </Container>
+      <ScrollIndicator />
     </header>
   )
 }

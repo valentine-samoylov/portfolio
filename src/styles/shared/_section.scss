@@ -1,0 +1,19 @@
+.section {
+  padding: 6rem 0;
+
+  &:nth-child(odd) {
+    background-color: $colorDarkSecondary;
+  }
+
+  @include respond-max(md) {
+    & {
+      padding: 5rem 0;
+    }
+  }
+
+  @include respond-max(xs) {
+    & {
+      padding: 4rem 0;
+    }
+  }
+}

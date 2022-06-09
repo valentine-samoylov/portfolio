@@ -1,0 +1,39 @@
+// Animations
+@keyframes scrollDown {
+  0% {
+    opacity: 1;
+    height: 0.5rem;
+  }
+
+  20% {
+    opacity: 1;
+    height: 0.5rem;
+  }
+
+  30% {
+    transform: translateY(0);
+    opacity: 1;
+    height: 1.1875rem;
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  80% {
+    transform: translateY(1.1875rem);
+    opacity: 0;
+    height: 0;
+  }
+
+  81% {
+    transform: translateY(0);
+    opacity: 0;
+    height: 0.5rem;
+  }
+
+  100% {
+    opacity: 1;
+    height: 0.5rem;
+  }
+}

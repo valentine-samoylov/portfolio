@@ -1,0 +1,101 @@
+// Nav
+.nav {
+  &__btn {
+    display: none;
+  }
+
+  &__links {
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 -0.5rem;
+  }
+
+  &__item {
+    padding: 0 0.5rem;
+  }
+
+  @include respond-max(md) {
+    &__btn {
+      position: relative;
+      z-index: 103;
+      display: flex;
+      padding: 0;
+      background-color: transparent;
+      border: none;
+      outline: transparent;
+
+      &.isActive {
+        .nav__pathLine:first-child {
+          stroke-dasharray: 90 207;
+          stroke-dashoffset: -134;
+          stroke-width: 6;
+        }
+
+        .nav__pathLine:nth-child(2) {
+          stroke-dasharray: 1 60;
+          stroke-dashoffset: -30;
+          stroke-width: 6;
+        }
+
+        .nav__pathLine:last-child {
+          stroke-dasharray: 90 207;
+          stroke-dashoffset: -134;
+          stroke-width: 6;
+        }
+      }
+    }
+
+    &__pathLine {
+      fill: none;
+      stroke: $colorWhite;
+      stroke-width: 6;
+      transition: stroke-dasharray 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+        stroke-dashoffset 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+      &:first-child {
+        stroke-dasharray: 60 207;
+        stroke-width: 6;
+      }
+
+      &:nth-child(2) {
+        stroke-dasharray: 60 60;
+        stroke-width: 6;
+      }
+
+      &:last-child {
+        stroke-dasharray: 60 207;
+        stroke-width: 6;
+      }
+    }
+
+    &__body {
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 102;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 5rem 2rem 2rem;
+      background-color: rgba($colorDarkPrimary, 0.97);
+      transform: translateX(100%);
+      backdrop-filter: blur(0.1875rem);
+      transition: transform 0.5s $transitionStyle 0s;
+      overflow: auto;
+
+      &.isOpen {
+        transform: translateX(0);
+      }
+    }
+
+    &__links {
+      margin: 0;
+      flex-direction: column;
+    }
+
+    &__item {
+      margin: 0;
+      padding: 0.5rem 0;
+    }
+  }
+}

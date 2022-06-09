@@ -1,0 +1,16 @@
+// ScrollIndicator
+.scrollIndicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.1875rem;
+  opacity: 0;
+  transition: opacity 0.3s $transitionStyle 0s;
+
+  &__progress {
+    width: 0;
+    height: 100%;
+    background: $colorAccentGradient;
+  }
+}

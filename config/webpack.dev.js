@@ -27,7 +27,13 @@ module.exports = merge(common, {
             options: { sourceMap: true, importLoaders: 1, modules: false },
           },
           { loader: 'postcss-loader', options: { sourceMap: true } },
-          { loader: 'sass-loader', options: { sourceMap: true } },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+              additionalData: "@import '@/styles/abstracts/index.scss';",
+            },
+          },
         ],
       },
     ],

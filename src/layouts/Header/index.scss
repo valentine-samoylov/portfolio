@@ -1,9 +1,6 @@
 // Header
-@import '../../assets/styles/utils/variables';
-@import '../../assets/styles/utils/mixins';
-
 .header {
-  // position: fixed;
+  position: fixed;
   z-index: 100;
   flex: 0 0 auto;
   width: 100%;
@@ -11,7 +8,11 @@
   transition: background-color 0.3s $transitionStyle 0s;
 
   &.isScrolled {
-    background: white;
+    background: $colorDarkPrimary;
+
+    .scrollIndicator {
+      opacity: 1;
+    }
   }
 
   @include respond-max(md) {

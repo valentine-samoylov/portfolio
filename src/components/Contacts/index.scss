@@ -1,0 +1,12 @@
+// Contacts
+.contacts {
+  &__list {
+    margin-bottom: 3rem;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 0.75rem;
+    }
+  }
+}

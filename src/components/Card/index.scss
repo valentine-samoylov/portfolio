@@ -1,0 +1,72 @@
+// Card
+.card {
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    position: relative;
+    z-index: 1;
+    border-radius: 0.75rem;
+    aspect-ratio: 16/9;
+    transition: transform 0.3s $transitionStyle 0s;
+    overflow: hidden;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($colorDarkPrimary, 0.3);
+      content: '';
+    }
+  }
+
+  &__img {
+    object-fit: cover;
+  }
+
+  &__techStack {
+    margin-bottom: 0.5rem;
+    gap: 0.5rem;
+  }
+
+  &__techStackItem {
+    padding: 0.55em 0.5em 0.4em;
+    border-radius: 1.5rem;
+    font-size: 0.7rem;
+    font-weight: 500;
+    line-height: 1;
+    background-color: $colorDarkGray;
+    color: rgba($colorWhite, 0.6);
+
+    svg {
+      margin-right: 0.3em;
+    }
+  }
+
+  &__body {
+    padding: 0.75rem 0 0.5rem;
+  }
+
+  &__title {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+
+  &__text {
+    color: rgba($colorWhite, 0.6);
+  }
+
+  &__text,
+  &__title {
+    line-clamp: 2;
+  }
+
+  &__footer {
+    margin-top: auto;
+    gap: 0.5rem;
+  }
+}

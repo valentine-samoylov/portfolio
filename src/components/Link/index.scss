@@ -1,0 +1,47 @@
+// Link
+.link {
+  display: inline-flex;
+  align-items: center;
+  max-width: fit-content;
+  text-align: center;
+  white-space: nowrap;
+  transition: all 0.3s $transitionStyle 0s;
+  cursor: pointer;
+  user-select: none;
+
+  svg {
+    margin: 0 0.5em 0 0;
+  }
+
+  &--primary {
+    padding: 0 0.2em;
+    font-weight: 400;
+  }
+
+  &--icon {
+    font-size: 2rem;
+
+    svg {
+      margin: 0;
+    }
+  }
+
+  &--primary,
+  &--icon {
+    border-radius: 0.25rem;
+
+    @include respond-min(md) {
+      &:hover {
+        color: $colorAccentPrimary;
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 0.1875rem rgba($colorAccentPrimary, 0.5);
+      }
+
+      &:active {
+        color: darken($colorAccentPrimary, 15%);
+      }
+    }
+  }
+}

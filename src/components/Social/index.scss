@@ -1,0 +1,10 @@
+// Social
+.social {
+  &__item {
+    will-change: transform;
+
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+}

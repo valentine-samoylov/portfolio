@@ -1,0 +1,76 @@
+// Utilities
+.d-b {
+  display: block;
+}
+
+// Flex utility classes
+.d-f {
+  display: flex;
+}
+
+.d-if {
+  display: inline-flex;
+}
+
+.jc-c {
+  justify-content: center;
+}
+
+.jc-sb {
+  justify-content: space-between;
+}
+
+.ai-c {
+  align-items: center;
+}
+
+.fd-c {
+  flex-direction: column;
+}
+
+.fxw-w {
+  flex-wrap: wrap;
+}
+
+// Grid utility classes
+.d-g {
+  display: grid;
+}
+
+.ji-c {
+  justify-items: center;
+}
+
+.pi-c {
+  place-items: center;
+}
+
+.img-fl {
+  @include img-fluid();
+}
+
+// Overlay for images
+.ovl-07 {
+  position: relative;
+  z-index: 0;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: rgba($colorDarkPrimary, 0.7);
+    content: '';
+  }
+}
+
+// Text utilities
+.text-truncate {
+  @include text-truncate();
+}
+
+.ta-c {
+  text-align: center;
+}

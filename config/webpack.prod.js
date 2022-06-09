@@ -31,7 +31,12 @@ module.exports = merge(common, {
             },
           },
           'postcss-loader',
-          'sass-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              additionalData: "@import '@/styles/abstracts/index.scss';",
+            },
+          },
         ],
       },
     ],

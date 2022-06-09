@@ -1,0 +1,49 @@
+// Button
+.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  max-width: fit-content;
+  text-align: center;
+  white-space: nowrap;
+  transition: all 0.3s $transitionStyle 0s;
+  user-select: none;
+
+  svg {
+    margin: 0 0.5em 0 0;
+  }
+
+  &--primary {
+    padding: 1em 2em;
+    background-color: $colorAccentPrimary;
+    border-radius: 3em;
+    font-weight: 700;
+
+    @include respond-min(md) {
+      &:hover {
+        background-color: darken($colorAccentPrimary, 15%);
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 0.1875rem rgba($colorAccentPrimary, 0.5);
+      }
+
+      &:active {
+        box-shadow: inset 0px 0.1875rem 0.25rem rgba($colorDarkPrimary, 0.5);
+      }
+    }
+  }
+
+  &--reversed {
+    svg {
+      order: 1;
+      margin: 0 0 0 0.5em;
+    }
+  }
+
+  &--centered {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

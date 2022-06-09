@@ -3,7 +3,7 @@ import './index.scss'
 import Container from '@/components/Container'
 import IconHeart from '@/assets/images/svg/heart.svg'
 
-const Footer: React.FC = () => {
+const Footer = () => {
   return (
     <footer className="footer">
       <Container>

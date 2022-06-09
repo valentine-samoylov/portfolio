@@ -5,7 +5,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
 const paths = require('./paths')
-const globals = require('../src/globals')
+const seo = require('../public/seo')
 
 module.exports = {
   entry: [`${paths.src}/index.tsx`],
@@ -53,29 +53,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'webpack Boilerplate',
       template: `${paths.public}/template.ejs`,
-      templateParameters: globals,
+      templateParameters: seo,
       filename: 'index.html',
       inject: 'body',
     }),
   ],
-
-  // resolve: {
-  //   // plugins: [new TsconfigPathsPlugin()],
-  //   modules: [paths.src, 'node_modules'],
-  //   alias: {
-  //     '@': paths.src,
-  //     '@assets': `${paths.src}/assets`,
-  //     '@components': `${paths.src}/components`,
-  //     '@hooks': `${paths.src}/hooks`,
-  //     '@context': `${paths.src}/context`,
-  //     '@layouts': `${paths.src}/layouts`,
-  //     '@pages': `${paths.src}/pages`,
-  //     '@utils': `${paths.src}/utils`,
-  //     '@data': `${paths.src}/data`,
-  //     assets: paths.public,
-  //   },
-  //   extensions: ['.ts', '.tsx', '.js', '.jsx', '.json', '.sass', '.scss'],
-  // },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx', '.json', '.sass', '.scss'],
     plugins: [new TsconfigPathsPlugin()],

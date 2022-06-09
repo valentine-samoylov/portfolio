@@ -1,0 +1,45 @@
+// Container properties
+$containerMaxWidth: 1320px;
+$containerMinWidth: 320px;
+$totalMaxWidth: $containerMaxWidth + 30px;
+
+$container: (
+  xl: 1170px,
+  lg: 960px,
+  md: 720px,
+  sm: 540px,
+  xs: none,
+);
+
+// Media breakpoints
+$breakpoints: (
+  xl: 1399.98px,
+  lg: 1199.98px,
+  md: 991.98px,
+  sm: 767.98px,
+  xs: 575.98px,
+);
+
+// Fonts
+$fontMontserrat: 'Montserrat', sans-serif;
+
+// Colours
+$colorWhite: #ffffff;
+$colorDarkGray: #1a1a1a;
+$colorDarkPrimary: #070707;
+$colorDarkSecondary: lighten($colorDarkPrimary, 2.8%);
+$colorAccentPrimary: #6667ab;
+$colorAccentGradient: linear-gradient(
+  135deg,
+  #6667ab,
+  #6765a9,
+  #6863a7,
+  #6961a5,
+  #6a5fa3,
+  #6a5da0,
+  #6b5b9e,
+  #6c599c
+);
+
+// Transitions
+$transitionStyle: ease;

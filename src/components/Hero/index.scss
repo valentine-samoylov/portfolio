@@ -1,0 +1,127 @@
+// Hero
+.hero {
+  min-height: var(--dynamic-vh);
+  padding: 6rem 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  &__inner {
+    flex: 1 1 100%;
+    padding-bottom: 2rem;
+  }
+
+  &__title {
+    margin: 0 0 0.2778em;
+    line-height: 1.1;
+    font-size: 7rem;
+    font-weight: 700;
+  }
+
+  &__subtitle {
+    margin: 0 0 1.388em;
+    font-size: 2.25rem;
+    font-weight: 500;
+    color: rgba($colorWhite, 0.6);
+  }
+
+  &__name,
+  &__details {
+    display: block;
+  }
+
+  &__location {
+    margin-right: 0.3em;
+  }
+
+  @include respond-min(lg) {
+    &__scrollDown {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      width: 1.25rem;
+      height: 2.5rem;
+      border: 0.125rem solid $colorWhite;
+      border-radius: 0.75rem;
+      border-radius: 12px;
+      transform: translateX(-50%);
+      transition: all 0.3s $transitionStyle 0s;
+
+      &::after {
+        position: absolute;
+        top: 0.5625rem;
+        left: calc(50% - 0.0625rem);
+        width: 0.125rem;
+        height: 0.5rem;
+        background: $colorWhite;
+        border-radius: 0.0625rem;
+        transition: all 0.3s $transitionStyle 0s;
+        content: '';
+        animation-name: scrollDown;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-delay: 2s;
+      }
+
+      &:hover {
+        border-color: $colorAccentPrimary;
+      }
+
+      &:hover::after {
+        background-color: $colorAccentPrimary;
+      }
+    }
+  }
+
+  @include respond-max(xl) {
+    &__title {
+      font-size: 5rem;
+    }
+
+    &__subtitle {
+      font-size: 1.8rem;
+    }
+  }
+
+  @include respond-max(lg) {
+    & {
+      min-height: 48rem;
+    }
+  }
+
+  @include respond-max(md) {
+    &__title {
+      font-size: 4rem;
+    }
+
+    &__subtitle {
+      font-size: 1.65rem;
+    }
+  }
+
+  @include respond-max(sm) {
+    &__inner {
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+
+  @include respond-max(xs) {
+    & {
+      min-height: var(--dynamic-vh);
+    }
+
+    &__inner {
+      max-width: 18.125rem;
+    }
+
+    &__title {
+      font-size: 3.25rem;
+    }
+
+    &__subtitle {
+      font-size: 1.25rem;
+    }
+  }
+}

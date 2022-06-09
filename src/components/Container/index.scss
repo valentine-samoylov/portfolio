@@ -1,0 +1,28 @@
+// Container
+.container {
+  max-width: $totalMaxWidth;
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
+
+  @include respond-max(xl) {
+    max-width: map-get($container, xl);
+  }
+
+  @include respond-max(lg) {
+    max-width: map-get($container, lg);
+  }
+
+  @include respond-max(md) {
+    max-width: map-get($container, md);
+  }
+
+  @include respond-max(sm) {
+    max-width: map-get($container, sm);
+  }
+
+  @include respond-max(xs) {
+    max-width: map-get($container, xs);
+    min-width: $containerMinWidth;
+  }
+}

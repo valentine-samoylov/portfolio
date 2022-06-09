@@ -1,16 +1,14 @@
 // Layout
+import { FC } from 'react'
+import { ChildrenTypes } from '@/types'
 import Header from '@/layouts/Header'
 import Footer from '@/layouts/Footer'
 
-type Props = {
-  children: JSX.Element
-}
-
-const Layout: React.FC<Props> = (props) => {
+const Layout: FC<ChildrenTypes> = ({ children }) => {
   return (
     <>
       <Header />
-      <main className="main">{props.children}</main>
+      <main className="main">{children}</main>
       <Footer />
     </>
   )

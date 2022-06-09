@@ -1,0 +1,18 @@
+// Heading
+.heading {
+  margin: 0 0 3rem;
+  font-size: 2.25rem;
+  font-weight: 700;
+
+  @include respond-max(md) {
+    & {
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  @include respond-max(sm) {
+    & {
+      font-size: 1.75rem;
+    }
+  }
+}

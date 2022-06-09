@@ -1,0 +1,142 @@
+{
+  "navLinks": [
+    {
+      "navLinkId": "Hero",
+      "targetId": "heroSection",
+      "linkText": "Home"
+    },
+    {
+      "navLinkId": "About",
+      "targetId": "aboutSection",
+      "linkText": "About me"
+    },
+    {
+      "navLinkId": "Skills",
+      "targetId": "skillsSection",
+      "linkText": "Skills"
+    },
+    {
+      "navLinkId": "Works",
+      "targetId": "worksSection",
+      "linkText": "My works"
+    },
+    {
+      "navLinkId": "Download",
+      "targetId": "downloadSection",
+      "linkText": "Download CV"
+    },
+    {
+      "navLinkId": "Contacts",
+      "targetId": "contactsSection",
+      "linkText": "Get in touch"
+    }
+  ],
+  "hero": {
+    "firstName": "Valentine",
+    "lastName": "Samoylov",
+    "position": "Front-end developer",
+    "location": "Odesa, Ukraine",
+    "btn": { "label": "Find out more" }
+  },
+  "about": {
+    "heading": "About me",
+    "description": [
+      {
+        "text": "My name is Valentine, I am a front-end developer from Odesa, Ukraine. I like to learn new technologies and improve my skills to create awesome web applications and web pages."
+      },
+      {
+        "text": "I am looking for a career in an IT company to be part of its team, to work on new, interesting projects and to grow professionally together,am looking for a job in an IT company to be a part of its team, work on new, interesting projects and grow professionally together."
+      },
+      {
+        "text": "If I were to describe myself in one sentence, it would be a versatile outgoing guy, an admirer of good music and movies, and a technology enthusiast."
+      }
+    ]
+  },
+  "skills": {
+    "heading": "Skills",
+    "subheading": "Other skills:",
+    "summary": [
+      {
+        "name": "JavaScript",
+        "progressed": "60%"
+      },
+      {
+        "name": "TypeScript",
+        "progressed": "40%"
+      },
+      {
+        "name": "React",
+        "progressed": "35%"
+      }
+    ],
+    "other": "HTML, CSS (BEM, RWD), TailwindCSS, Bootstrap, Bulma, EJS, Pug (Jade), SASS/SCSS, PostCSS, React (React Hooks, React Context), Node.js, NPM, Yarn, Webpack, Gulp, Git, Postman, Figma, Adobe Photoshop, Atlassian Jira."
+  },
+
+  "works": {
+    "heading": "My works",
+    "cards": [
+      {
+        "title": "Luxury Hotels",
+        "text": "Four-page hotel landing",
+        "hrefDemo": " https://luxury-hotels.vercel.app/",
+        "hrefRepo": "https://github.com/valentine-samoylov/luxury-hotels/"
+      },
+      {
+        "title": "Mountain",
+        "text": "Snowboard & ski school landing",
+        "hrefDemo": "https://mountain-school.vercel.app/",
+        "hrefRepo": "https://github.com/valentine-samoylov/mountain/"
+      },
+      {
+        "title": "Porten",
+        "text": "Men's accessories shop",
+        "hrefDemo": "https://porten-shop.vercel.app/",
+        "hrefRepo": "https://github.com/valentine-samoylov/porten-shop/"
+      },
+      {
+        "title": "Krypto",
+        "text": "Cryptocurrency page using CoinGecko API and Axios.",
+        "hrefDemo": "https://krypto-trading.vercel.app/",
+        "hrefRepo": "https://github.com/valentine-samoylov/krypto-trading"
+      }
+    ],
+    "btn": { "inactive": "Show more", "active": "Show less" }
+  },
+  "downloads": {
+    "heading": "Download CV",
+    "btnLabel": "Download"
+  },
+  "contacts": {
+    "heading": "Get in touch",
+    "subheading": "Feel free to contact me in any of the following ways:",
+    "links": [
+      {
+        "href": "tel:+380931453354",
+        "text": "+38 (093) 145 33 54"
+      },
+      {
+        "href": "mailto:valentine.samoylov@gmail.com",
+        "text": "valentine.samoylov@gmail.com"
+      }
+    ]
+  },
+  "social": {
+    "links": [
+      {
+        "href": "https://github.com/valentine-samoylov"
+      },
+      {
+        "href": "https://www.linkedin.com/in/valentine-samoylov/"
+      },
+      {
+        "href": "https://join.skype.com/invite/fjnLBWvnMhpk"
+      },
+      {
+        "href": "https://t.me/valentine_samoylov/"
+      },
+      {
+        "href": "https://www.instagram.com/valentine.samoylov/"
+      }
+    ]
+  }
+}
