@@ -7,9 +7,11 @@ import useScrollLock from '@/hooks/useScrollLock'
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const toggleScrollLock = useScrollLock()
+
   const toggle = () => {
     setIsOpen(!isOpen)
-    useScrollLock()
+    toggleScrollLock()
   }
   const hide = () => setIsOpen(false)
   const show = () => setIsOpen(true)
