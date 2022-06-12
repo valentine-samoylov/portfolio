@@ -18,15 +18,25 @@ const Card: FC<CardTypes> = ({ data }) => {
         />
       </div>
       <div className="card__body">
-        <ul className="card__techStack d-f fxw-w">
+        {/* <ul className="card__techStack d-f fxw-w">
           {data.stack.map((stackItem, idx) => (
             <li className="card__techStackItem d-f ai-c" key={idx}>
               {stackItem.icon}
               <span>{stackItem.text}</span>
             </li>
           ))}
-        </ul>
-        <h4 className="card__title">{data.title}</h4>
+        </ul> */}
+        <div className="d-f ai-c jc-sb">
+          <h4 className="card__title">{data.title}</h4>
+          <ul className="card__techStack d-f fxw-w">
+            {data.stack.map((stackItem, idx) => (
+              <li className="d-f ai-c" key={idx}>
+                {stackItem.icon}
+                {/* <span>{stackItem.text}</span> */}
+              </li>
+            ))}
+          </ul>
+        </div>
         <p className="card__text">{data.text}</p>
       </div>
       <div className="card__footer d-f">

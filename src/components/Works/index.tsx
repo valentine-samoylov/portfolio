@@ -22,31 +22,31 @@ import IconReact from '@/assets/images/svg/react.svg'
 import IconAxios from '@/assets/images/svg/axios.svg'
 import IconTailwind from '@/assets/images/svg/tailwindcss.svg'
 
-const tech = [
-  { icon: <IconPug />, text: 'Pug (Jade)' },
-  { icon: <IconSASS />, text: 'SASS/SCSS' },
-  { icon: <IconJS />, text: 'JS' },
-  { icon: <IconReact />, text: 'React' },
-  { icon: <IconAxios />, text: 'Axios' },
-  { icon: <IconTailwind />, text: 'Tailwind CSS' },
+const techIcons = [
+  { icon: <IconPug title="Pug (Jade)" /> },
+  { icon: <IconSASS title="SASS/SCSS" /> },
+  { icon: <IconJS title="JS" /> },
+  { icon: <IconReact title="React" /> },
+  { icon: <IconAxios title="Axios" /> },
+  { icon: <IconTailwind title="Tailwind CSS" /> },
 ]
 
 const worksAssets = [
   {
     imgSrc: previewLuxuryHotels,
-    stack: [tech[0], tech[1], tech[2]],
+    stack: [techIcons[0], techIcons[1], techIcons[2]],
   },
   {
     imgSrc: previewMountain,
-    stack: [tech[0], tech[1], tech[2]],
+    stack: [techIcons[0], techIcons[1], techIcons[2]],
   },
   {
     imgSrc: previewPorten,
-    stack: [tech[0], tech[1], tech[2]],
+    stack: [techIcons[0], techIcons[1], techIcons[2]],
   },
   {
     imgSrc: previewKrypto,
-    stack: [tech[3], tech[4], tech[5]],
+    stack: [techIcons[3], techIcons[4], techIcons[5]],
   },
 ]
 

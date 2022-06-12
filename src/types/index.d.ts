@@ -36,6 +36,7 @@ export type BtnTypes = {
 export type LinkTypes = {
   type: string
   href: string
+  target: string
   children: ReactNode | ReactNode[]
 }
 
@@ -50,7 +51,7 @@ export type CardTypes = {
     imgSrc: string
     stack: {
       icon: JSX.Element
-      text: string
+      // text: string
     }[]
   }
 }

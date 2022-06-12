@@ -28,32 +28,18 @@
     object-fit: cover;
   }
 
-  &__techStack {
-    margin-bottom: 0.5rem;
-    gap: 0.5rem;
-  }
-
-  &__techStackItem {
-    padding: 0.55em 0.5em 0.4em;
-    border-radius: 1.5rem;
-    font-size: 0.7rem;
-    font-weight: 500;
-    line-height: 1;
-    background-color: $colorDarkGray;
-    color: rgba($colorWhite, 0.6);
-
-    svg {
-      margin-right: 0.3em;
-    }
-  }
-
   &__body {
     padding: 0.75rem 0 0.5rem;
   }
 
   &__title {
+    padding-right: 1rem;
     font-size: 1.25rem;
     font-weight: 500;
+  }
+
+  &__techStack {
+    gap: 0.5rem;
   }
 
   &__text {
