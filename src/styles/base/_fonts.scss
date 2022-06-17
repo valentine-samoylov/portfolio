@@ -21,10 +21,10 @@
 
 @font-face {
   font-family: 'Montserrat';
-  src: local('Montserrat Bold'), local('Montserrat-Bold'),
-    url('assets/fonts/Montserrat-Bold.woff2') format('woff2'),
-    url('assets/fonts/Montserrat-Bold.woff') format('woff');
-  font-weight: 700;
+  src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'),
+    url('assets/fonts/Montserrat-SemiBold.woff2') format('woff2'),
+    url('assets/fonts/Montserrat-SemiBold.woff') format('woff');
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }

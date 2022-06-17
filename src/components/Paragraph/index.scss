@@ -1,19 +1,12 @@
 // Paragraph
 .paragraph {
   margin: 0;
-  font-size: 1.125rem;
   line-height: 1.5;
   text-align: justify;
   color: rgba($colorWhite, 0.6);
 
   &:not(:last-child) {
-    margin-bottom: 1rem;
-  }
-
-  @include respond-max(lg) {
-    & {
-      font-size: 1rem;
-    }
+    margin-bottom: 0.75rem;
   }
 
   @include respond-max(sm) {
