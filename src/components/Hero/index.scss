@@ -46,7 +46,6 @@
       height: 2.5rem;
       border: 0.125rem solid $colorWhite;
       border-radius: 0.75rem;
-      border-radius: 12px;
       transform: translateX(-50%);
       transition: all 0.3s $transitionStyle 0s;
 
@@ -72,6 +71,7 @@
 
       &:hover::after {
         background-color: $colorAccentPrimary;
+        animation-play-state: paused;
       }
     }
   }
