@@ -4,7 +4,33 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-    <meta name="description" content="Web site created using create-react-app" />
+    <!-- Search Engine -->
+    <meta name="description" content="<%=description %>" />
+    <meta name="image" content="<%=previewImg %>" />
+    <!-- /Search Engine -->
+
+    <!-- Schema.org for Google -->
+    <meta itemprop="name" content="<%=title %>" />
+    <meta itemprop="description" content="<%=description %>" />
+    <meta itemprop="image" content="<%=previewImg %>" />
+    <!-- /Schema.org for Google -->
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="<%=title %>" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:image:src" content="<%=previewImg %>" />
+    <!-- /Twitter -->
+
+    <!--Open Graph general (Facebook, Pinterest & Google+)-->
+    <meta name="og:title" content="<%=title %>" />
+    <meta name="og:description" content="<%=description %>" />
+    <meta name="og:image" content="<%=previewImg %>" />
+    <meta name="og:url" content="<%=url %>" />
+    <meta name="og:site_name" content="<%=title %>" />
+    <meta name="og:type" content="website" />
+    <!--/Open Graph general (Facebook, Pinterest & Google+)-->
+
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <title><%=title %></title>
   </head>
