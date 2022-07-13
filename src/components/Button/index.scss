@@ -8,6 +8,14 @@
   white-space: nowrap;
   transition: all 0.3s $transitionStyle 0s;
   user-select: none;
+  overflow: hidden;
+
+  &__inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+  }
 
   svg {
     margin: 0 0.5em 0 0;

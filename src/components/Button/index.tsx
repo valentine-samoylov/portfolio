@@ -27,15 +27,20 @@ const Button: FC<BtnTypes> = ({ as, type, variant, href, targetId, children, ...
     <>
       {as === 'anchor' ? (
         <a className={classes} href={href || '#'} onClick={handleClick} {...props}>
-          {children}
+          <span className="button__inner">{children}</span>
+          <div className="liquid"></div>
         </a>
       ) : as === 'link' ? (
         <a className={classes} href={href || '#'} {...props}>
-          {children}
+          <span className="button__inner">{children}</span>
+
+          <div className="liquid"></div>
         </a>
       ) : (
         <button className={classes} {...props} type="button">
-          {children}
+          <span className="button__inner">{children}</span>
+
+          <div className="liquid"></div>
         </button>
       )}
     </>
