@@ -13,7 +13,7 @@ export type HeadingTypes = {
 export type SubheadingTypes = {
   children: ReactNode | ReactNode[]
   className?: string
-  variant?: string
+  variant?: string | any
 }
 
 export type ParagraphTypes = {

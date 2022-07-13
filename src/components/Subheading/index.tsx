@@ -11,7 +11,9 @@ const subheadingProps: any = {
 
 const Subheading: FC<SubheadingTypes> = ({ className, variant, children }) => {
   return (
-    <h4 className={`subheading ${className} ${subheadingProps.variant[variant]}`}>{children}</h4>
+    <h4 className={`subheading ${className} ${subheadingProps.variant[variant] || ''}`}>
+      {children}
+    </h4>
   )
 }
 
