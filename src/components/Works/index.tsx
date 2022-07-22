@@ -1,21 +1,25 @@
 // Works
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 import gsap from 'gsap'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { FreeMode, Keyboard } from 'swiper'
+import 'swiper/scss'
+import 'swiper/scss/free-mode'
+import 'swiper/scss/keyboard'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import { useNav } from '@/hooks/useNav'
 import './index.scss'
 import Container from '@/components/Container'
 import Heading from '@/components/Heading'
 import Card from '@/components/Card'
-import Button from '@/components/Button'
 import data from '@/db/index.json'
-import IconPlus from '@/assets/images/svg/plus.svg'
-import IconMinus from '@/assets/images/svg/minus.svg'
 import previewLuxuryHotels from '@/assets/images/content/preview-luxury-hotels.jpg?as=webp'
 import previewMountain from '@/assets/images/content/preview-mountain.jpg?as=webp'
 import previewPorten from '@/assets/images/content/preview-porten.jpg?as=webp'
+import previewCalc from '@/assets/images/content/preview-calc.jpg?as=webp'
 import previewKrypto from '@/assets/images/content/preview-krypto.jpg?as=webp'
 import IconPug from '@/assets/images/svg/pug.svg'
+import IconCSS from '@/assets/images/svg/css3.svg'
 import IconSASS from '@/assets/images/svg/sass.svg'
 import IconJS from '@/assets/images/svg/js.svg'
 import IconReact from '@/assets/images/svg/react.svg'
@@ -23,30 +27,35 @@ import IconAxios from '@/assets/images/svg/axios.svg'
 import IconTailwind from '@/assets/images/svg/tailwindcss.svg'
 
 const techIcons = [
-  { icon: <IconPug title="Pug (Jade)" /> },
-  { icon: <IconSASS title="SASS/SCSS" /> },
-  { icon: <IconJS title="JS" /> },
-  { icon: <IconReact title="React" /> },
-  { icon: <IconAxios title="Axios" /> },
-  { icon: <IconTailwind title="Tailwind CSS" /> },
+  { icon: <IconPug />, title: 'Pug' },
+  { icon: <IconCSS />, title: 'CSS' },
+  { icon: <IconSASS />, title: 'SASS/SCSS' },
+  { icon: <IconJS />, title: 'JS' },
+  { icon: <IconReact />, title: 'React' },
+  { icon: <IconAxios />, title: 'Axios' },
+  { icon: <IconTailwind />, title: 'Tailwind CSS' },
 ]
 
 const worksAssets = [
   {
     imgSrc: previewLuxuryHotels,
-    stack: [techIcons[0], techIcons[1], techIcons[2]],
+    stack: [techIcons[0], techIcons[2], techIcons[3]],
   },
   {
     imgSrc: previewMountain,
-    stack: [techIcons[0], techIcons[1], techIcons[2]],
+    stack: [techIcons[0], techIcons[2], techIcons[3]],
   },
   {
     imgSrc: previewPorten,
-    stack: [techIcons[0], techIcons[1], techIcons[2]],
+    stack: [techIcons[0], techIcons[2], techIcons[3]],
+  },
+  {
+    imgSrc: previewCalc,
+    stack: [techIcons[4], techIcons[1]],
   },
   {
     imgSrc: previewKrypto,
-    stack: [techIcons[3], techIcons[4], techIcons[5]],
+    stack: [techIcons[4], techIcons[5], techIcons[6]],
   },
 ]
 
@@ -57,22 +66,8 @@ const worksData = worksAssets
   }))
   .reverse()
 
-const buttonProps = {
-  type: 'primary',
-  variant: 'centered',
-}
-
 const Works = () => {
   const worksRef = useNav('Works')
-  const [itemsToShow, setItemsToShow] = useState(3)
-
-  const showMore = () => {
-    setItemsToShow(worksData.length)
-  }
-
-  const showLess = () => {
-    setItemsToShow(3)
-  }
 
   gsap.registerPlugin(ScrollTrigger)
 
@@ -105,25 +100,30 @@ const Works = () => {
     <section className="works section" id="worksSection" ref={worksRef}>
       <Container>
         <Heading id="worksHeading">{data.works.heading}</Heading>
-        <div className="works__content d-g">
-          <div className="works__items d-g">
-            {worksData.slice(0, itemsToShow).map((workItem, idx) => (
-              <Card data={workItem} key={idx} />
-            ))}
-          </div>
-        </div>
-        {itemsToShow === 3 ? (
-          <Button {...buttonProps} onClick={showMore}>
-            <IconPlus />
-            {data.works.btn.inactive}
-          </Button>
-        ) : (
-          <Button {...buttonProps} onClick={showLess}>
-            <IconMinus />
-            {data.works.btn.active}
-          </Button>
-        )}
       </Container>
+
+      <Swiper
+        slidesPerView={'auto'}
+        centeredSlides={true}
+        spaceBetween={32}
+        freeMode={true}
+        keyboard={{
+          enabled: true,
+        }}
+        modules={[FreeMode, Keyboard]}
+        breakpoints={{
+          // when window width is >= 540px
+          540: {
+            centeredSlides: false,
+          },
+        }}
+      >
+        {worksData.map((workItem, idx) => (
+          <SwiperSlide className="works__slide" key={idx}>
+            <Card data={workItem} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </section>
   )
 }

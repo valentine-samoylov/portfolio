@@ -1,15 +1,15 @@
 // Card
 .card {
-  min-width: 100%;
-  display: flex;
-  flex-direction: column;
+  max-width: 20rem;
+  height: 100%;
+  background-color: $colorDarkGray;
+  border-radius: 0.75rem;
+  overflow: hidden;
 
   &__header {
     position: relative;
     z-index: 1;
-    border-radius: 0.75rem;
     aspect-ratio: 16/9;
-    transition: transform 0.3s $transitionStyle 0s;
     overflow: hidden;
 
     &::before {
@@ -29,31 +29,43 @@
   }
 
   &__body {
-    padding: 0.75rem 0 0.5rem;
+    padding: 1rem;
+  }
+
+  &__title,
+  &__text {
+    line-clamp: 2;
   }
 
   &__title {
-    padding-right: 1rem;
+    margin-bottom: 0.5rem;
     font-size: 1.25rem;
     font-weight: 500;
+  }
+
+  &__text {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+    color: rgba($colorWhite, 0.6);
   }
 
   &__techStack {
     gap: 0.5rem;
   }
 
-  &__text {
-    line-height: 1.5;
-    color: rgba($colorWhite, 0.6);
-  }
+  &__techStackItem {
+    gap: 0.3em;
+    padding: 0.25em 0.5em;
+    background-color: rgba($colorWhite, 0.1);
+    border-radius: 1em;
 
-  &__text,
-  &__title {
-    line-clamp: 2;
+    font-size: 0.75rem;
   }
 
   &__footer {
     margin-top: auto;
+    padding: 1rem;
     gap: 0.5rem;
+    border-top: 1px solid rgba($colorWhite, 0.1);
   }
 }

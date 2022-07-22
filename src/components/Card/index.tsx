@@ -8,7 +8,7 @@ import IconCode from '@/assets/images/svg/code.svg'
 
 const Card: FC<CardTypes> = ({ data }) => {
   return (
-    <article className="card">
+    <article className="card d-f fd-c">
       <div className="card__header">
         <img
           className="img-fl"
@@ -18,26 +18,18 @@ const Card: FC<CardTypes> = ({ data }) => {
         />
       </div>
       <div className="card__body">
-        {/* <ul className="card__techStack d-f fxw-w">
+        <div className="d-f ai-c jc-sb">
+          <h4 className="card__title">{data.title}</h4>
+        </div>
+        <p className="card__text">{data.text}</p>
+        <ul className="card__techStack d-f fxw-w">
           {data.stack.map((stackItem, idx) => (
             <li className="card__techStackItem d-f ai-c" key={idx}>
               {stackItem.icon}
-              <span>{stackItem.text}</span>
+              <span>{stackItem.title}</span>
             </li>
           ))}
-        </ul> */}
-        <div className="d-f ai-c jc-sb">
-          <h4 className="card__title">{data.title}</h4>
-          <ul className="card__techStack d-f fxw-w">
-            {data.stack.map((stackItem, idx) => (
-              <li className="d-f ai-c" key={idx}>
-                {stackItem.icon}
-                {/* <span>{stackItem.text}</span> */}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <p className="card__text">{data.text}</p>
+        </ul>
       </div>
       <div className="card__footer d-f">
         <Link type="primary" target="_blank" href={data.hrefDemo}>

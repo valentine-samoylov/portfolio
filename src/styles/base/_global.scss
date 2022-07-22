@@ -1,16 +1,37 @@
 // Global
 :root {
   --dynamic-vh: 100vh;
+  --containerMaxWidth: calc(1350px + 15px);
+
+  @include respond-max(xl) {
+    & {
+      --containerMaxWidth: 1170px;
+    }
+  }
+
+  @include respond-max(lg) {
+    & {
+      --containerMaxWidth: 960px;
+    }
+  }
+
+  @include respond-max(md) {
+    & {
+      --containerMaxWidth: 720px;
+    }
+  }
 
   @include respond-max(sm) {
     & {
-      --item-mx-w: 75%;
+      --containerMaxWidth: 540px;
+      --itemMaxWidth: 75%;
     }
   }
 
   @include respond-max(xs) {
     & {
-      --item-mx-w: 20rem;
+      --containerMaxWidth: auto;
+      --itemMaxWidth: 20rem;
     }
   }
 }

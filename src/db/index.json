@@ -94,6 +94,12 @@
         "hrefRepo": "https://github.com/valentine-samoylov/porten-shop/"
       },
       {
+        "title": "Calculator App",
+        "text": "A simple calculator app, made using React and styled with CSS.",
+        "hrefDemo": "https://vs-calculator-app.vercel.app/",
+        "hrefRepo": "https://github.com/valentine-samoylov/calculator-app/"
+      },
+      {
         "title": "Krypto",
         "text": "A cryptocurrency page made using React, Axios and CoinGecko API, styled with TailwindCSS.",
         "hrefDemo": "https://krypto-trading.vercel.app/",

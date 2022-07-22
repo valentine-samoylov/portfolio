@@ -51,7 +51,7 @@ export type CardTypes = {
     imgSrc: string
     stack: {
       icon: JSX.Element
-      // text: string
+      title: string
     }[]
   }
 }

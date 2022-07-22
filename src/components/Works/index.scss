@@ -1,27 +1,27 @@
-// Works
+// // Works
 .works {
-  &__content {
-    margin-bottom: 3rem;
-  }
+  &__slide {
+    max-width: 20rem;
+    height: auto;
+    cursor: grab;
 
-  &__items {
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2.5rem 1.5rem;
-  }
-
-  @include respond-max(md) {
-    &__content {
-      place-items: center;
+    &:first-child {
+      margin-left: calc(((100vw - var(--containerMaxWidth)) / 2) + 15px);
     }
 
-    &__items {
-      grid-template-columns: repeat(2, 1fr);
+    &:last-child {
+      margin-right: calc(((100vw - var(--containerMaxWidth)) / 2) + 15px);
     }
   }
 
   @include respond-max(xs) {
-    &__items {
-      grid-template-columns: minmax(auto, 20rem);
+    &__slide {
+      max-width: 18rem;
+
+      &:first-child,
+      &:last-child {
+        margin: 0;
+      }
     }
   }
 }
