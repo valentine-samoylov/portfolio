@@ -2,7 +2,7 @@
 import { useEffect } from 'react'
 import gsap from 'gsap'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { FreeMode, Keyboard } from 'swiper'
+import { FreeMode, Keyboard, Mousewheel } from 'swiper'
 import 'swiper/scss'
 import 'swiper/scss/free-mode'
 import 'swiper/scss/keyboard'
@@ -110,7 +110,10 @@ const Works = () => {
         keyboard={{
           enabled: true,
         }}
-        modules={[FreeMode, Keyboard]}
+        mousewheel={{
+          forceToAxis: true,
+        }}
+        modules={[FreeMode, Keyboard, Mousewheel]}
         breakpoints={{
           // when window width is >= 540px
           540: {
